@@ -48,7 +48,7 @@ const login = () => {
             </div>
             <div className='col-12 mt-2 px-5 g-0 text-end'>
               <div className='mx-4 my-4'>
-                <Link href='/forgotpassword' >
+                <Link href='/forgotPassword' >
                   <a className="d-flex justify-content-end text-decoration-none text-color3">
                     Forgot Password?
                   </a>
