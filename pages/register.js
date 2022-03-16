@@ -49,27 +49,18 @@ const login = () => {
                 <Input type="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' />
               </div>
             </div>
-            <div className='col-12'>
+            <div className='col-12 mb-4'>
               <div className='px-5 my-2 w-100 d-inline-block' >
                 <Input type="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' />
               </div>
             </div>
-            <div className='col-12 mt-2 px-5 g-0 text-end'>
-              <div className='mx-4 my-4'>
-                <Link href='/forgotpassword' >
-                  <a className="d-flex justify-content-end text-decoration-none text-color3">
-                    Forgot Password?
-                  </a>
-                </Link>
-              </div>
-            </div>
-            <div className=' col-12 text-center '>
+            <div className=' col-12 mt-3 text-center '>
               <div className='px-5 my-2 w-100 d-inline-block' >
-                <Button className='register w-100 mt-3'>Login</Button>
+                <Button className='register w-100 mt-3'>Register</Button>
               </div>
             </div>
             <div>
-              <div className='mt-4 px-5 text-center '>Don’t have an account? Let’s <Link href="/signup" ><a className='text-decoration-none text-color3'> Sign Up</a></Link></div>
+              <div className='mt-4 px-5 text-center '>Already have an account? Let`s <Link href="/login" ><a className='text-decoration-none text-color3'> Login</a></Link></div>
             </div>
           </div>
         </div>
