@@ -1,0 +1,50 @@
+$theme-colors: (
+  'color1' : #980F5A,
+  'color2' : #750550,
+  'color3' : #570530,
+  'color4' : #4C0027
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
+.btn-confirm{
+    width: 35rem;
+    height: 3rem;
+    border-radius: 0.8rem;
+    border-color: unset;
+    background-color: #980F5A;  
+    color:aliceblue
+}
+.btn-register:hover{
+  background-color: #570530;
+}
+.desc1{
+  color: aliceblue;
+}
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.input-underline {
+    border-radius: unset;
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 1px grey solid;
+    width: 35rem;
+}
+.input-underline:focus {
+    outline: unset;
+}
+
+@media all and (max-width: 768px) {
+  .createPin-page, .btn-confirm {
+    width: 100%;
+  }
+  .createPin-page{
+    flex-direction: column !important;
+  }
+  .desc1 h1{
+    text-align: center;
+  }
+}
