@@ -61,7 +61,7 @@ const login = () => {
               </div>
             </div>
             <div>
-              <div className='mt-4 px-5 text-center '>Don’t have an account? Let’s <Link href="/signup" ><a className='text-decoration-none text-color3'> Sign Up</a></Link></div>
+              <div className='mt-4 px-5 text-center '>Don’t have an account? Let’s <Link href="/register" ><a className='text-decoration-none text-color3'> Sign Up</a></Link></div>
             </div>
           </div>
         </div>
