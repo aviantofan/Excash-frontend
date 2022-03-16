@@ -1,11 +1,9 @@
-import styles from '../styles/Button.module.css'
+import React from 'react'
 
-const Button = ({ children, ...rest }) => {
+export const Button = ({ className, ...rest }) => {
   return (
-    <button className={styles.button} {...rest}>
-      {children}
-    </button>
+    <button className={`btn-${className}`} {...rest}></button>
   )
 }
 
-export default Button
+export default Butt

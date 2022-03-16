@@ -1,10 +1,8 @@
-import styles from '../styles/Input.module.css'
+import React from 'react'
 
-const Input = ({ children, ...rest }) => {
+export const Input = ({ className, ...rest }) => {
   return (
-    <input className={styles.input} {...rest}>
-      {children}
-    </input>
+    <input className={`${className}`} {...rest}></input>
   )
 }
 
