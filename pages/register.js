@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Button from '../components/Button'
 import Input from '../components/Input'
 
-const login = () => {
+const register = () => {
   return (
     <div className='container-fluid register-page'>
       <div className='row'>
@@ -69,4 +69,4 @@ const login = () => {
   )
 }
 
-export default login
+export default register
