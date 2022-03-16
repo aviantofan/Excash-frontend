@@ -6,4 +6,4 @@ export const Button = ({ className, ...rest }) => {
   )
 }
 
-export default Butt
+export default Button
