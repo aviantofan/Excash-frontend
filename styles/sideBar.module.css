@@ -1,0 +1,18 @@
+.menu {
+  background-color: white;
+  border-radius: 25px;
+  list-style-type: none;
+}
+.menu li {
+  margin: 10px 0;
+}
+.menu li a{
+  color: rgba(58, 61, 66, 0.8);
+  padding-left: 10px;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+.menu li a.active{
+  color: #6379F4;
+  border-color: #6379F4;
+}
