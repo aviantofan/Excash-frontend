@@ -7,6 +7,9 @@ $theme-colors: (
 
 @import "bootstrap/scss/bootstrap.scss";
 
+.sideBar{
+  border-radius: 25px;
+}
 .banner{
   height: 190px;
   border-radius: 20px;
