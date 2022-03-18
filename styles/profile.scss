@@ -1,0 +1,22 @@
+$theme-colors: (
+  'color1' : #980F5A,
+  'color2' : #750550,
+  'color3' : #570530,
+  'color4' : #4C0027
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
+.user{
+  width: 433px;
+  border-radius: 10px;
+}
+.dataProfile{
+  height: 550px;
+  border-radius: 20px;
+  justify-content: between; 
+  padding: 30px;
+}
+.dataProfile .text{
+  font-size: 24px;
+}
