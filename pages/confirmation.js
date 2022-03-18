@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
 
-const transferInput = () => {
+const confirmation = () => {
   return (
     <>
       <Header />
@@ -69,4 +69,4 @@ const transferInput = () => {
   )
 }
 
-export default transferInput
+export default confirmation
