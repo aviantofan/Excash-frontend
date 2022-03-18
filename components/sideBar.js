@@ -36,11 +36,11 @@ const SideBar = () => {
             border-left: 3px solid transparent;
           }
           .menu li a.active{
-            color:white;
-            border-color: white;
+            color:#980F5A;
+            border-color: #980F5A;
           }
           .logout{
-            color:white;
+            color:#4C0027;
           }
       `}
       </style>
