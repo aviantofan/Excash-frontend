@@ -1,6 +1,7 @@
 import {
   Chart as ChartJS,
   CategoryScale,
+  LinearScale,
   BarElement,
   Title,
   Tooltip,
@@ -8,6 +9,7 @@ import {
 } from 'chart.js';
 ChartJS.register(
   CategoryScale,
+  LinearScale,
   BarElement,
   Title,
   Tooltip,
@@ -61,23 +63,23 @@ const Chart = ({ labels, data: rawData, income = 0, expense = 0 }) => {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-sm-6'>
+        <div className='col-6'>
           <div>
             <FaArrowDown color='#1EC15F' />
           </div>
+          <div>Income</div>
+          <div>Rp. {Number(income).toLocaleString('id-ID')}</div>
         </div>
-        <div>Income</div>
-        <div>Rp. {Number(income).toLocaleString('id-ID')}</div>
-      </div>
-      <div className='col-sm-6'>
-        <div>
-          <FaArrowUp color='#FF5B37' />
+        <div className='col-6'>
+          <div>
+            <FaArrowUp color='#FF5B37' />
+          </div>
+          <div>Expense</div>
+          <div>Rp. {Number(expense).toLocaleString('id-ID')}</div>
         </div>
-        <div>Expense</div>
-        <div>Rp. {Number(expense).toLocaleString('id-ID')}</div>
-      </div>
-      <div className='col-12'>
-        <Bar option={option} data={data} />
+        <div className='col-12'>
+          <Bar option={option} data={data} />
+        </div>
       </div>
     </div>
   )
