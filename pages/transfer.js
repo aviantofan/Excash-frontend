@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { BsSearch } from 'react-icons/bs'
+import Input from '../components/Input'
 
 const transfer = () => {
   const transfer = [
@@ -18,15 +19,15 @@ const transfer = () => {
             <SideBar />
           </div>
           <div className='col'>
-            <div className='container history bg-color5'>
+            <div className='container dataTransfer bg-color5'>
               <div className='row'>
-                <div className='col-6 mt-4 mb-3'>Search Receiver</div>
+                <div className='col-6 mb-3 text'>Search Receiver</div>
               </div>
               <div className='row'>
                 <div className='col-12'>
                   <div className='d-flex flex-row align-items-center d-inline-block position-relative'>
                     <div className="position-absolute px-2"><BsSearch /></div>
-                    <input type="text" className='px-5 py-2 bg-color5 w-100' placeholder='Search receiver here' />
+                    <Input type="text" className='px-5 py-2 bg-color5 w-100 input-search' placeholder='Search receiver here' />
                   </div>
                 </div>
               </div>

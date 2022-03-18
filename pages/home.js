@@ -48,10 +48,10 @@ const home = () => {
                   <div className='col-6 mt-4 mb-3'>Transaction History</div>
                   <div className='col text-end mt-4'>See all</div>
                 </div>
-                <div className='row mt-2'>
-                  {history.map(item => {
-                    return (
-                      <>
+                {history.map(item => {
+                  return (
+                    <>
+                      <div className='row mt-2'>
                         <div className='col-3 mb-3' key='history'>
                           <Image src={item.image} width={56} height={56} alt='user' />
                         </div>
@@ -62,10 +62,10 @@ const home = () => {
                         <div className='col text-end'>
                           <div>{item.value}</div>
                         </div>
-                      </>
-                    )
-                  })}
-                </div>
+                      </div>
+                    </>
+                  )
+                })}
               </div>
             </div>
           </div>

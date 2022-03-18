@@ -1,3 +1,16 @@
+.dataTransfer{
+  height: 500px;
+  border-radius: 20px;
+  justify-content: between; 
+  padding: 30px;
+}
 .data{
+  border-radius: 10px;
+}
+.dataTransfer .text{
+  font-family: 'Nunito Sans';
+  font-weight: bold;
+}
+.input-search{
   border-radius: 10px;
 }

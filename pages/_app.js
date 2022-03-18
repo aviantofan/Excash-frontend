@@ -5,6 +5,8 @@ import '../styles/register.scss'
 import '../styles/createPin.scss'
 import '../styles/forgotPassword.scss'
 import '../styles/home.scss'
+import '../styles/history.scss'
+import '../styles/transfer.scss'
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {

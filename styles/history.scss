@@ -5,17 +5,20 @@ $theme-colors: (
   'color4' : #4C0027,
   'color5' : antiquewhite
 );
+$font:'Nunito Sans';
 
 @import "bootstrap/scss/bootstrap.scss";
 
 .sideBar{
   border-radius: 25px;
 }
-.history{
-  height: 400px;
+.datahistory{
+  height: 500px;
   border-radius: 20px;
-  display: flex;
-  flex-direction: row;
   justify-content: between; 
   padding: 30px;
+}
+.datahistory .text{
+  font-weight: bold;
+  font-family: $font;
 }

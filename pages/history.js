@@ -17,10 +17,10 @@ const history = () => {
             <SideBar />
           </div>
           <div className='col'>
-            <div className='container history bg-color5'>
+            <div className='container datahistory bg-color5'>
               <div className='row'>
-                <div className='col-6 mt-4 mb-3'>Transaction History</div>
-                <div className='col text-end mt-4 option'>
+                <div className='col-6 mt-2 mb-3 text'>Transaction History</div>
+                <div className='col text-end mt-2 option'>
                   <select name='filter' className="form-option">
                     <option value="" style={{ display: 'none' }}>--Select Filter--</option>
                     <option value="1">Accept</option>
@@ -29,24 +29,24 @@ const history = () => {
                   </select>
                 </div>
               </div>
-              <div className='row mt-2'>
-                {history.map(item => {
-                  return (
-                    <>
-                      <div className='col-lg-1 mb-3' key='history'>
+              {history.map(item => {
+                return (
+                  <>
+                    <div className='row mt-2'>
+                      <div className='col-1 mb-3' key='history'>
                         <Image src={item.image} width={56} height={56} alt='user' />
                       </div>
-                      <div className='col-lg-3'>
+                      <div className='col-5'>
                         <div>{item.name}</div>
                         <div>{item.status}</div>
                       </div>
-                      <div className='col-lg-8 text-end'>
+                      <div className='col text-end'>
                         <div>{item.value}</div>
                       </div>
-                    </>
-                  )
-                })}
-              </div>
+                    </div>
+                  </>
+                )
+              })}
             </div>
           </div>
         </div>
