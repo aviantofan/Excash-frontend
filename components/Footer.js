@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className={`bg-color1 py-3 mt-3`}>
-      <div className="footer-wrapper container text-color4">
+      <div className="footer-wrapper container text-white">
         <section className="footer-credit row">
           <div className="col-12 col-lg-7">
             <p className="mb-5 mb-lg-0">{new Date().getFullYear()} ZWallet. All right reserved.</p>
