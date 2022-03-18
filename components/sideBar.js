@@ -5,7 +5,6 @@ import { IoGridOutline } from 'react-icons/io5'
 import { VscArrowUp } from 'react-icons/vsc'
 import { HiPlus } from 'react-icons/hi'
 import { RiUser3Line } from 'react-icons/ri'
-import styles from './sideBar.module.css'
 
 const SideBar = () => {
   const route = useRouter()
