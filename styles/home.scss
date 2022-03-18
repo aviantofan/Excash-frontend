@@ -1,0 +1,29 @@
+$theme-colors: (
+  'color1' : #980F5A,
+  'color2' : #750550,
+  'color3' : #570530,
+  'color4' : #4C0027
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
+.banner{
+  height: 190px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: between;
+  color: white;
+  padding: 30px;
+}
+.banner .section{
+  flex: 1;
+}
+.banner .section .button{
+  width: 100px;
+  padding: 6px;
+  border: 1px solid #fff;
+  background-color: rgba(255,255,255,0.4);
+  color: #fff;
+  border-radius: 10px;
+}
