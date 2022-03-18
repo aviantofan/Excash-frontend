@@ -5,7 +5,7 @@ import { IoGridOutline } from 'react-icons/io5'
 import { VscArrowUp } from 'react-icons/vsc'
 import { HiPlus } from 'react-icons/hi'
 import { RiUser3Line } from 'react-icons/ri'
-import styles from '../styles/sideBar.module.css'
+import styles from './sideBar.module.css'
 
 const SideBar = () => {
   const route = useRouter()
@@ -21,7 +21,29 @@ const SideBar = () => {
   ]
   return (
     <>
-      <ul className={styles.menu}>
+      <style jsx>
+        {`
+      .nav {
+        background-color: white;
+        border-radius: 25px;
+        list-style-type: none;
+      }
+      .nav li {
+        margin: 10px 0;
+      }
+      .nav li a{
+        color: rgba(58, 61, 66, 0.8);
+        padding-left: 10px;
+        text-decoration: none;
+        border-left: 3px solid transparent;
+      }
+      .nav li a.active{
+        color: #6379F4;
+        border-color: #6379F4;
+      }
+      `}
+      </style>
+      <ul className='nav'>
         {menu.map(item => {
           const Icon = item.icon
           return (
