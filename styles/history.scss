@@ -1,0 +1,21 @@
+$theme-colors: (
+  'color1' : #980F5A,
+  'color2' : #750550,
+  'color3' : #570530,
+  'color4' : #4C0027,
+  'color5' : antiquewhite
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
+.sideBar{
+  border-radius: 25px;
+}
+.history{
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: between; 
+  padding: 30px;
+}
