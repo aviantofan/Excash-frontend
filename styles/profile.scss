@@ -23,3 +23,13 @@ $theme-colors: (
 .dataProfile .text{
   font-size: 24px;
 }
+.btn-change{
+  height: 3rem;
+  border-radius: 0.8rem;
+  border-color: unset;
+  background-color: #980F5A;  
+  color:aliceblue
+}
+.btn-change:hover{
+  background-color: #570530
+}
