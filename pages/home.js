@@ -2,7 +2,9 @@ import Chart from '../components/Chart'
 import SideBar from '../components/SideBar'
 import Button from '../components/Button'
 import Image from 'next/image'
-import { FaArrowUp, FaArrowDown } from 'react-icons/fa'
+import { FaArrowUp, FaPlus } from 'react-icons/fa'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const home = () => {
   const history = [
@@ -11,7 +13,8 @@ const home = () => {
   ]
   return (
     <>
-      <div className='container'>
+      <Header />
+      <div className='container mt-4 mb-4'>
         <div className='row'>
           <div className='col-3 sideBar bg-color5' key='sideBar'>
             <SideBar />
@@ -30,7 +33,7 @@ const home = () => {
                       <Button className='transfer'><FaArrowUp />Transfer</Button>
                     </div>
                     <div>
-                      <Button className='topup'><FaArrowDown />Topup</Button>
+                      <Button className='topup'><FaPlus />Topup</Button>
                     </div>
                   </div>
                 </div>
@@ -68,6 +71,7 @@ const home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
