@@ -5,6 +5,7 @@ import { IoGridOutline } from 'react-icons/io5'
 import { VscArrowUp } from 'react-icons/vsc'
 import { HiPlus } from 'react-icons/hi'
 import { RiUser3Line } from 'react-icons/ri'
+import { FiLogOut } from 'react-icons/fi'
 
 const SideBar = () => {
   const route = useRouter()
@@ -13,7 +14,7 @@ const SideBar = () => {
     setActive(route.pathname)
   }, [route.pathname])
   const menu = [
-    { link: '/', name: 'Dashboard', icon: IoGridOutline },
+    { link: '/home', name: 'Dashboard', icon: IoGridOutline },
     { link: '/transfer', name: 'Transfer', icon: VscArrowUp },
     { link: '/topup', name: 'Topup', icon: HiPlus },
     { link: '/profile', name: 'Profile', icon: RiUser3Line },
@@ -22,33 +23,34 @@ const SideBar = () => {
     <>
       <style jsx>
         {`
-      .nav {
-        background-color: white;
-        border-radius: 25px;
-        list-style-type: none;
-      }
-      .nav li {
-        margin: 10px 0;
-      }
-      .nav li a{
-        color: rgba(58, 61, 66, 0.8);
-        padding-left: 10px;
-        text-decoration: none;
-        border-left: 3px solid transparent;
-      }
-      .nav li a.active{
-        color: #6379F4;
-        border-color: #6379F4;
-      }
+          .menu {
+              list-style-type: none;
+          }
+          .menu li {
+              margin: 10px 0;
+          }
+          .menu li a{
+            color: #4C0027;
+            padding-left: 10px;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+          }
+          .menu li a.active{
+            color:white;
+            border-color: white;
+          }
+          .logout{
+            color:white;
+          }
       `}
       </style>
-      <ul className='nav'>
+      <ul className='menu' key='menu'>
         {menu.map(item => {
           const Icon = item.icon
           return (
             <li key={item.name}>
               <Link href={item.link}>
-                <a className={active === item.link ? 'active' : ''}>
+                <a className={`d-flex flex-row align-items-center mt-4 ${active === item.link ? 'active' : ''}`}>
                   <Icon className='me-3' />
                   {item.name}
                 </a>
@@ -57,6 +59,20 @@ const SideBar = () => {
           )
         })}
       </ul>
+      <div className='mt-5'>
+        <div className="px-4  mt-5">
+          <div className="px-4 py-5 mt-5">
+            <div className="mt-5 py-3">
+              <Link href="/" >
+                <a className=" d-flex flex-row mt-5 text-decoration-none logout">
+                  <div className="px-3" ><FiLogOut /></div>
+                  <div>Logout</div>
+                </a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
