@@ -2,7 +2,8 @@ $theme-colors: (
   'color1' : #980F5A,
   'color2' : #750550,
   'color3' : #570530,
-  'color4' : #4C0027
+  'color4' : #4C0027,
+  'color5' : antiquewhite
 );
 
 @import "bootstrap/scss/bootstrap.scss";
@@ -22,11 +23,26 @@ $theme-colors: (
 .banner .section{
   flex: 1;
 }
-.banner .section .button{
+.banner .section .btn-transfer{
   width: 100px;
   padding: 6px;
   border: 1px solid #fff;
   background-color: rgba(255,255,255,0.4);
   color: #fff;
   border-radius: 10px;
+}
+.banner .section .btn-topup{
+  width: 100px;
+  padding: 6px;
+  border: 1px solid #fff;
+  background-color: rgba(255,255,255,0.4);
+  color: #fff;
+  border-radius: 10px;
+}
+.chart{
+  border-radius: 25px;
+  height: 340px;
+}
+.history{
+  border-radius: 25px;
 }
