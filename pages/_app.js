@@ -7,6 +7,7 @@ import '../styles/forgotPassword.scss'
 import '../styles/home.scss'
 import '../styles/history.scss'
 import '../styles/transfer.scss'
+import '../styles/profile.scss'
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps }) {
