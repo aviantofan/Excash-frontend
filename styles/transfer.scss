@@ -1,5 +1,15 @@
+$theme-colors: (
+  'color1' : #980F5A,
+  'color2' : #750550,
+  'color3' : #570530,
+  'color4' : #4C0027,
+  'color5' : antiquewhite
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
 .dataTransfer{
-  height: 500px;
+  height: 550px;
   border-radius: 20px;
   justify-content: between; 
   padding: 30px;
@@ -29,4 +39,7 @@
   border-color: unset;
   background-color: #980F5A;  
   color:aliceblue
+}
+.btn-transferInput:hover{
+  background-color: #570530;
 }
