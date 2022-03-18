@@ -24,29 +24,27 @@ const home = () => {
               </div>
               <div className='row'>
                 <div className='col-12'>
-                  <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text" id="basic-addon1"><BsSearch /></span>
-                    </div>
-                    <input type="text" className="form-control" placeholder="Search receiver here" aria-label="Username" aria-describedby="basic-addon1" />
+                  <div className='d-flex flex-row align-items-center d-inline-block position-relative'>
+                    <div className="position-absolute px-2"><BsSearch /></div>
+                    <input type="text" className='px-5 py-2 bg-color5 w-100' placeholder='Search receiver here' />
                   </div>
                 </div>
               </div>
-              <div className='row mt-2'>
-                {transfer.map(item => {
-                  return (
-                    <>
-                      <div className='col-lg-1 mb-3' key='history'>
+              {transfer.map(item => {
+                return (
+                  <>
+                    <div className='row mt-2 data bg-white align-items-center'>
+                      <div className='col-lg-1 mb-3 pt-4' key='history'>
                         <Image src={item.image} width={56} height={56} alt='user' />
                       </div>
                       <div className='col-lg-11'>
                         <div>{item.name}</div>
                         <div>{item.number}</div>
                       </div>
-                    </>
-                  )
-                })}
-              </div>
+                    </div>
+                  </>
+                )
+              })}
             </div>
           </div>
         </div>
