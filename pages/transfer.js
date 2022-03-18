@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { BsSearch } from 'react-icons/bs'
 
-const home = () => {
+const transfer = () => {
   const transfer = [
     { image: '/images/2.png', name: 'Samuel Suhi', number: '+62 813-8492-9994' },
     { image: '/images/1.png', name: 'Christine', number: '+62 812-4343-6731' }
@@ -54,4 +54,4 @@ const home = () => {
   )
 }
 
-export default home
+export default transfer

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const home = () => {
+const history = () => {
   const history = [
     { image: '/images/2.png', name: 'Samuel Suhi', status: 'Accept', value: '50000' },
     { image: '/images/1.png', name: 'Christine', status: 'Pending', value: '150000' }
@@ -56,4 +56,4 @@ const home = () => {
   )
 }
 
-export default home
+export default history
