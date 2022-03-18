@@ -1,0 +1,33 @@
+$font-family:'Nunito Sans';
+
+.navbarLight {
+    background-color: antiquewhite;
+    height: 140px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.navbarBrand {
+    font-family: $font-family;
+    font-size: 29px;
+    font-weight: 700;
+    color: #4C0027;
+    text-decoration: none;
+}
+.textName {
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4C0027;
+    margin-left: 20px;
+}
+.textPhone {
+    font-family: $font-family;
+    font-size: 13px;
+    color: #4C0027;
+    margin-left: 20px;
+}
+.icons{
+  font-size: larger;
+  font-weight: bolder;
+  margin-left: 20px;
+}
