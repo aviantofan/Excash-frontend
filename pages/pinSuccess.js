@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Button from '../components/Button'
 import { FaCheckCircle } from 'react-icons/fa'
 
-const createPin = () => {
+const pinSuccess = () => {
   return (
     <div className='container-fluid createPin-page'>
       <div className='row'>
@@ -42,4 +42,4 @@ const createPin = () => {
   )
 }
 
-export default createPin
+export default pinSuccess
