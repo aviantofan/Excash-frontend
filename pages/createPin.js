@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Button from '../components/Button'
-import Input from '../components/Input'
+import PinInput from '../components/PinInput'
 
 const createPin = () => {
   return (
@@ -33,7 +33,7 @@ const createPin = () => {
           <div className='row'>
             <div className='col-12'>
               <div className='px-5 my-3 w-100 d-inline-block ' >
-                <Input type="text" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your firstname' />
+                <PinInput />
               </div>
             </div>
             <div className=' col-12 mt-3 text-center '>
