@@ -2,7 +2,6 @@ import SideBar from '../components/SideBar'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import PinInput from '../components/PinInput'
 import Button from '../components/Button'
 
 const changePin = () => {
@@ -26,12 +25,12 @@ const changePin = () => {
               </div>
               <div className='row mt-5' >
                 <div className='col-12 text-center'>
-                  <PinInput />
+
                 </div>
               </div>
               <div className='row mt-5' >
                 <div className='col-12 text-center'>
-                  <Button type='submit' className='change w-50' >Change Password</Button>
+                  <Button type='submit' className='change w-50' >Continue</Button>
                 </div>
               </div>
             </div>
