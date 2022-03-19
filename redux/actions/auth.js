@@ -1,11 +1,12 @@
 import http from '../../helpers/http'
-import qs from 'qs'
 
-export const loginProcess = (email, password) => {
-  const data = { 'email': email, 'password': password };
+export const login = (email, password) => {
+  const param = new URLSearchParams()
+  param.append('email', email)
+  param.append('password', password)
   return {
     type: 'AUTH_LOGIN',
-    payload: http().post('/auth/login', qs.stringify(data))
+    payload: http().post('/auth/login', param)
   }
 }
 
