@@ -1,8 +1,8 @@
 import SideBar from '../components/SideBar'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
+import PinInput from '../components/PinInput'
 
 const changePin = () => {
   return (
@@ -24,8 +24,10 @@ const changePin = () => {
                 </div>
               </div>
               <div className='row mt-5' >
-                <div className='col-12 text-center'>
-
+                <div className='col-lg-12 px-5'>
+                  <div>
+                    <PinInput />
+                  </div>
                 </div>
               </div>
               <div className='row mt-5' >

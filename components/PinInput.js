@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 import OtpInput from 'react-otp-input';
+import createpin from '../styles/createpin.module.scss'
 
-export default class App extends Component {
-  state = { otp: '' };
+const PinInput = () => {
+  const [otp, setOtp] = useState('')
 
-  handleChange = (otp) => this.setState({ otp });
-
-  render() {
-    return (
-      <OtpInput
-        value={this.state.otp}
-        onChange={this.handleChange}
-        numInputs={6}
-        separator={<span> </span>}
-      />
-    );
-  }
+  return (
+    <OtpInput
+      value={otp}
+      onChange={setOtp}
+      numInputs={6}
+      isInputNum={true}
+      containerStyle='justify-content-center'
+      inputStyle={createpin.otpInput} />
+  );
 }
+
+export default PinInput
