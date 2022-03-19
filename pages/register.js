@@ -10,9 +10,11 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const Register = () => {
 
+  const register = useSelector(state => state.register)
   const [error, setError] = useState({})
   const dispatch = useDispatch()
   const router = useRouter()
+  const [success, setSuccess] = useState()
   const [validated, setValidated] = useState(false);
 
   const validation = (data) => {
