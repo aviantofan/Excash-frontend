@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
+import { FiLock } from "react-icons/fi";
 
 const changePassword = () => {
   return (
@@ -26,17 +27,17 @@ const changePassword = () => {
               </div>
               <div className='row mt-5' >
                 <div className='col-12 text-center'>
-                  <Input type='password' className='input-underline text-start bg-color5 text-color4 w-50' placeholder='Current password' />
+                  <Input type='password' icon={<FiLock />} className='input-underline text-start bg-color5 text-color4 w-50' placeholder='Current password' />
                 </div>
               </div>
               <div className='row mt-5' >
                 <div className='col-12 text-center'>
-                  <Input type='password' className='input-underline text-start bg-color5 text-color4 w-50' placeholder='New password' />
+                  <Input type='password' icon={<FiLock />} className='input-underline text-start bg-color5 text-color4 w-50' placeholder='New password' />
                 </div>
               </div>
               <div className='row mt-5' >
                 <div className='col-12 text-center'>
-                  <Input type='password' className='input-underline text-start bg-color5 text-color4 w-50' placeholder='Repeat new password' />
+                  <Input type='password' icon={<FiLock />} className='input-underline text-start bg-color5 text-color4 w-50' placeholder='Repeat new password' />
                 </div>
               </div>
               <div className='row mt-5' >

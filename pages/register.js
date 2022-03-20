@@ -7,6 +7,9 @@ import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import { getDataRegister } from "../redux/actions/register";
 import { useDispatch, useSelector } from 'react-redux'
+import { FiLock } from 'react-icons/fi';
+import { BiUser } from 'react-icons/bi'
+import { AiOutlineMail } from 'react-icons/ai'
 
 const Register = () => {
 
@@ -84,28 +87,28 @@ const Register = () => {
             <div className='row'>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="text" name="firstname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your firstname' required />
+                  <Input type="text" name="firstname" icon={<BiUser />} className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your firstname' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.firstname ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="text" name="lastname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your lastname' required />
+                  <Input type="text" name="lastname" icon={<BiUser />} className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your lastname' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.lastname ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="email" name="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' required />
+                  <Input type="email" name="email" icon={<AiOutlineMail />} className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.email ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12 mb-4'>
                 <div className='px-5 my-2 w-100 d-inline-block' >
-                  <Input type="password" name="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' required />
+                  <Input type="password" name="password" icon={<FiLock />} className='w-100 py-2 text-color input-underline' placeholder='Enter your password' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.password ? <Form.Control.Feedback type="invalid">Password must be filled</Form.Control.Feedback> : ''}
