@@ -1,10 +1,11 @@
 import http from '../../helpers/http'
+import qs from 'qs'
 
 export const registerProcess = (data, pin) => {
-  param.append('pin', data.pin)
+  data.pin = pin
   return {
     type: 'REGISTER',
-    payload: http().post('/auth/register', param)
+    payload: http().post('/auth/register', qs.stringify(data))
   }
 }
 

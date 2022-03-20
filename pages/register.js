@@ -47,7 +47,7 @@ const Register = () => {
       setValidated(false)
     } else {
       dispatch(getDataRegister(data))
-      router.push('/createpin')
+      router.push('/createPin')
     }
   }
 

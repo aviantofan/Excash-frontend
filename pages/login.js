@@ -40,7 +40,9 @@ const Login = () => {
     else {
       dispatch(loginProcess(email, password))
       if (!auth.isError) {
-        router.push('/home')
+        if (auth.token != null) {
+          router.push('/home')
+        }
       }
     }
   }

@@ -1,8 +1,15 @@
 import Image from 'next/image'
 import Button from '../components/Button'
 import { FaCheckCircle } from 'react-icons/fa'
+import { useRouter } from "next/router";
 
-const pinSuccess = () => {
+const PinSuccess = () => {
+
+  const router = useRouter()
+  const onLogin = () => {
+    router.push('/login')
+  }
+
   return (
     <div className='container-fluid createPin-page'>
       <div className='row'>
@@ -32,7 +39,7 @@ const pinSuccess = () => {
           <div className='row'>
             <div className=' col-12 mt-3 text-center '>
               <div className='px-5 my-2 w-100 d-inline-block' >
-                <Button className='confirm w-100 mt-3'>Login Now</Button>
+                <Button className='confirm w-100 mt-3' onClick={onLogin}>Login Now</Button>
               </div>
             </div>
           </div>
@@ -42,4 +49,4 @@ const pinSuccess = () => {
   )
 }
 
-export default pinSuccess
+export default PinSuccess

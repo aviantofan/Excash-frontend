@@ -19,7 +19,7 @@ const CreatePin = () => {
     console.log(register.data)
     console.log("pin" + pin)
     registerProcess(register.data, pin)
-    router.push('/account-created')
+    router.push('/pinSuccess')
   }
 
   return (
