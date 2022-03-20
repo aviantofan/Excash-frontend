@@ -6,6 +6,7 @@ import { VscArrowUp } from 'react-icons/vsc'
 import { HiPlus } from 'react-icons/hi'
 import { RiUser3Line } from 'react-icons/ri'
 import { FiLogOut } from 'react-icons/fi'
+import { useDispatch, useSelector } from 'react-redux'
 
 const SideBar = () => {
   const route = useRouter()
@@ -19,6 +20,16 @@ const SideBar = () => {
     { link: '/topup', name: 'Topup', icon: HiPlus },
     { link: '/profile', name: 'Profile', icon: RiUser3Line },
   ]
+
+  const dispatch = useDispatch()
+  const auth = useSelector(state => state.auth)
+  const navigate = useNavigate()
+
+  const onLogout = (e) => {
+    e.preventDefault()
+    dispatch({ type: 'AUTH_LOGOUT' })
+    navigate('/login')
+  }
   return (
     <>
       <style jsx>
@@ -63,7 +74,7 @@ const SideBar = () => {
         <div className="px-4  mt-5">
           <div className="px-4 py-5 mt-5">
             <div className="mt-5 py-3">
-              <Link href="/" >
+              <Link onclick={onLogout} >
                 <a className=" d-flex flex-row mt-5 text-decoration-none logout">
                   <div className="px-3" ><FiLogOut /></div>
                   <div>Logout</div>

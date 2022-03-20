@@ -1,24 +1,25 @@
 import { Form } from 'react-bootstrap'
 import Image from 'next/image'
 import Button from '../components/Button'
-import PinInput from '../components/PinInput'
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 import { connect, useSelector } from 'react-redux'
 import { registerProcess } from "../redux/actions/register";
+import OtpInput from 'react-otp-input';
+import createpin from '../styles/createpin.module.scss'
 
 const CreatePin = () => {
 
   const register = useSelector(state => state.register)
-  const [pin, setPin] = useState(0)
+  const [otp, setOtp] = useState(0)
   const [error, setError] = useState(false)
   const router = useRouter()
 
   const handlePin = (event) => {
     event.preventDefault()
     console.log(register.data)
-    console.log("pin" + pin)
-    registerProcess(register.data, pin)
+    console.log("pin" + otp)
+    registerProcess(register.data, otp)
     router.push('/pinSuccess')
   }
 
@@ -53,7 +54,13 @@ const CreatePin = () => {
             <div className='row'>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <PinInput />
+                  <OtpInput
+                    value={otp}
+                    onChange={setOtp}
+                    numInputs={6}
+                    isInputNum={true}
+                    containerStyle='justify-content-center'
+                    inputStyle={createpin.otpInput} />
                 </div>
               </div>
               <div className=' col-12 mt-3 text-center '>

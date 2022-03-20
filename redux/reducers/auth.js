@@ -39,7 +39,53 @@ const auth = (state = dataLogin, action) => {
       state.user = data.results
       return { ...state }
     }
-    case 'LOGOUT': {
+    case 'GET_PROFILE_PENDING': {
+      state.isLoading = true
+      return { ...state }
+    }
+    case 'GET_PROFILE_FULFILLED': {
+      const { data } = action.payload
+      state.isLoading = false
+      state.user = data.results
+      return { ...state }
+    }
+    case 'AUTH_FORGOT_PASSWORD_PENDING': {
+      state.isLoading = true
+      state.isError = false
+      return { ...state }
+    }
+    case 'AUTH_FORGOT_PASSWORD_FULFILLED': {
+      const { data } = action.payload
+      state.isLoading = false
+      state.isError = false
+      state.successMsg = data.message
+      return { ...state }
+    }
+    case 'AUTH_FORGOT_PASSWORD_REJECTED': {
+      state.isLoading = false
+      state.isError = true
+      return { ...state }
+    }
+    case 'AUTH_NEW_PASSWORD_PENDING': {
+      state.isLoading = true
+      state.isError = false
+      return { ...state }
+    }
+    case 'AUTH_NEW_PASSWORD_FULFILLED': {
+      const { data } = action.payload
+      state.isLoading = false
+      state.isError = false
+      state.successMsg = data.message
+      return { ...state }
+    }
+    case 'AUTH_NEW_PASSWORD_REJECTED': {
+      const { data } = action.payload.response
+      state.isLoading = false
+      state.isError = true
+      state.errMessage = data.message
+      return { ...state }
+    }
+    case 'AUTH_LOGOUT': {
       state.token = null
       window.localStorage.removeItem('token')
       state.isAuthenticated = false

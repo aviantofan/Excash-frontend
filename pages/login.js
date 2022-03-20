@@ -79,15 +79,17 @@ const Login = () => {
             <div className='row'>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="text" name="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' />
+                  <Input type="text" name="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' required />
                 </div>
                 <span className="underline"></span>
+                {error !== null && error.email ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12'>
                 <div className='px-5 my-2 w-100 d-inline-block' >
-                  <Input type="password" name="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' />
+                  <Input type="password" name="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' required />
                 </div>
                 <span className="underline"></span>
+                {error !== null && error.password ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12 mt-2 px-5 g-0 text-end'>
                 <div className='mx-4 my-4'>

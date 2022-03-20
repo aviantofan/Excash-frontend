@@ -84,37 +84,35 @@ const Register = () => {
             <div className='row'>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="text" name="firstname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your firstname' />
+                  <Input type="text" name="firstname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your firstname' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.firstname ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="text" name="lastname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your lastname' />
+                  <Input type="text" name="lastname" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your lastname' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.lastname ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12'>
                 <div className='px-5 my-3 w-100 d-inline-block ' >
-                  <Input type="email" name="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' />
+                  <Input type="email" name="email" className=' w-100 py-2 text-color2 input-underline' placeholder='Enter your e-mail' required />
                 </div>
                 <span className="underline"></span>
                 {error !== null && error.email ? <Form.Control.Feedback type="invalid"></Form.Control.Feedback> : ''}
               </div>
               <div className='col-12 mb-4'>
                 <div className='px-5 my-2 w-100 d-inline-block' >
-                  <Input type="password" name="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' />
+                  <Input type="password" name="password" className='w-100 py-2 text-color input-underline' placeholder='Enter your password' required />
                 </div>
                 <span className="underline"></span>
-                {error !== null && error.password ? <Form.Control.Feedback type="invalid">
-                  Please provide a valid password.
-                </Form.Control.Feedback> : ''}
+                {error !== null && error.password ? <Form.Control.Feedback type="invalid">Password must be filled</Form.Control.Feedback> : ''}
               </div>
               <div className=' col-12 mt-3 text-center '>
                 <div className='px-5 my-2 w-100 d-inline-block' >
-                  <Button className='register w-100 mt-3'>Sign Up</Button>
+                  <Button type='submit' className='register w-100 mt-3'>Sign Up</Button>
                 </div>
               </div>
               <div>

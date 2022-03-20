@@ -15,3 +15,10 @@ export const getDataUsers = (token) => {
     payload: http(token).get('/users')
   }
 }
+
+export const getDataProfile = (token) => {
+  return {
+    type: 'GET_PROFILE',
+    payload: http(token).get('/profile')
+  }
+}
