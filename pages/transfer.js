@@ -1,9 +1,11 @@
+
 import SideBar from '../components/SideBar'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { BsSearch } from 'react-icons/bs'
 import Input from '../components/Input'
+import Link from 'next/link'
 
 const transfer = () => {
   const transfer = [
@@ -34,15 +36,19 @@ const transfer = () => {
               {transfer.map(item => {
                 return (
                   <>
-                    <div className='row mt-2 data bg-white align-items-center'>
-                      <div className='col-lg-1 mb-3 pt-4' key='history'>
-                        <Image src={item.image} width={56} height={56} alt='user' />
-                      </div>
-                      <div className='col-lg-11'>
-                        <div>{item.name}</div>
-                        <div>{item.number}</div>
-                      </div>
-                    </div>
+                    <Link href='/transferInput'>
+                      <a className='text-decoration-none text-color3'>
+                        <div className='row mt-2 data bg-white align-items-center'>
+                          <div className='col-lg-1 mb-3 pt-4' key='history'>
+                            <Image src={item.image} width={56} height={56} alt='user' />
+                          </div>
+                          <div className='col-lg-11'>
+                            <div>{item.name}</div>
+                            <div>{item.number}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   </>
                 )
               })}

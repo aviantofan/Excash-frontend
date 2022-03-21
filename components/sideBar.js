@@ -23,12 +23,12 @@ const SideBar = () => {
 
   const dispatch = useDispatch()
   const auth = useSelector(state => state.auth)
-  const navigate = useNavigate()
+  const router = useRouter()
 
   const onLogout = (e) => {
     e.preventDefault()
     dispatch({ type: 'AUTH_LOGOUT' })
-    navigate('/login')
+    router.push('/login')
   }
   return (
     <>
@@ -74,12 +74,10 @@ const SideBar = () => {
         <div className="px-4  mt-5">
           <div className="px-4 py-5 mt-5">
             <div className="mt-5 py-3">
-              <Link onclick={onLogout} >
-                <a className=" d-flex flex-row mt-5 text-decoration-none logout">
-                  <div className="px-3" ><FiLogOut /></div>
-                  <div>Logout</div>
-                </a>
-              </Link>
+              <a className=" d-flex flex-row mt-5 text-decoration-none logout">
+                <div className="px-3" ><FiLogOut /></div>
+                <div onClick={onLogout}>Logout</div>
+              </a>
             </div>
           </div>
         </div>

@@ -42,6 +42,7 @@ const Login = () => {
     else {
       dispatch(loginProcess(email, password))
       if (!auth.isError) {
+        alert('Login success!')
         if (auth.token != null) {
           router.push('/home')
         }

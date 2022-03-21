@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Button from '../components/Button'
 import { BsPencil } from 'react-icons/Bs'
 import { FaArrowRight } from 'react-icons/Fa'
+import Link from 'next/link'
 
 const profile = () => {
   return (
@@ -33,42 +34,54 @@ const profile = () => {
                   <div>+62 813-9387-7946</div>
                 </div>
               </div>
-              <div className='row mt-3 align-items-center justify-content-center'>
-                <div className='col-lg-12 py-3 user bg-white'>
-                  <div className='row'>
-                    <div className='col-6'>
-                      <div>Personal Information</div>
-                    </div>
-                    <div className='col-6 text-end'>
-                      <div><FaArrowRight /></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='row mt-3 align-items-center justify-content-center'>
-                <div className='col-lg-12 py-3 user bg-white'>
-                  <div className='row'>
-                    <div className='col-6'>
-                      <div>Change Password</div>
-                    </div>
-                    <div className='col-6 text-end'>
-                      <div><FaArrowRight /></div>
+              <Link href='/personalInformation'>
+                <a className='text-decoration-none text-color3'>
+                  <div className='row mt-3 align-items-center justify-content-center'>
+                    <div className='col-lg-12 py-3 user bg-white'>
+                      <div className='row'>
+                        <div className='col-6'>
+                          <div>Personal Information</div>
+                        </div>
+                        <div className='col-6 text-end'>
+                          <div><FaArrowRight /></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className='row mt-3 align-items-center justify-content-center'>
-                <div className='col-lg-12 py-3 user bg-white'>
-                  <div className='row'>
-                    <div className='col-6'>
-                      <div>Change PIN</div>
-                    </div>
-                    <div className='col-6 text-end'>
-                      <div><FaArrowRight /></div>
+                </a>
+              </Link>
+              <Link href='/changePassword'>
+                <a className='text-decoration-none text-color3'>
+                  <div className='row mt-3 align-items-center justify-content-center'>
+                    <div className='col-lg-12 py-3 user bg-white'>
+                      <div className='row'>
+                        <div className='col-6'>
+                          <div>Change Password</div>
+                        </div>
+                        <div className='col-6 text-end'>
+                          <div><FaArrowRight /></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </a>
+              </Link>
+              <Link href='/changePin'>
+                <a className='text-decoration-none text-color3'>
+                  <div className='row mt-3 align-items-center justify-content-center'>
+                    <div className='col-lg-12 py-3 user bg-white'>
+                      <div className='row'>
+                        <div className='col-6'>
+                          <div>Change PIN</div>
+                        </div>
+                        <div className='col-6 text-end'>
+                          <div><FaArrowRight /></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </Link>
               <div className='row mt-3 align-items-center justify-content-center'>
                 <div className='col-lg-12 py-3 user bg-white'>
                   <div className='row'>

@@ -31,7 +31,7 @@ const ForgotPassword = () => {
       setError(validate)
     } else {
       dispatch(forgotPassword(email))
-      alert('Please check your email. We have sent confirmation code')
+      alert('Please check your email. We have sent a link')
     }
   }
   return (

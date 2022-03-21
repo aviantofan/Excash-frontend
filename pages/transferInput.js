@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Input from '../components/Input'
 import Button from '../components/Button'
+import Link from 'next/link'
 
 const transferInput = () => {
   return (
@@ -49,7 +50,11 @@ const transferInput = () => {
               </div>
               <div className='row mt-3' >
                 <div className='col-12 text-end'>
-                  <Button type='text' className='transferInput'>Continue</Button>
+                  <Link href='/confirmation'>
+                    <a>
+                      <Button type='text' className='transferInput'>Continue</Button>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

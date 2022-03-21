@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { FaArrowUp, FaPlus } from 'react-icons/fa'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 const home = () => {
   const history = [
@@ -46,7 +47,11 @@ const home = () => {
               <div className='col-5 mt-2 history bg-color5'>
                 <div className='row'>
                   <div className='col-6 mt-4 mb-3'>Transaction History</div>
-                  <div className='col text-end mt-4'>See all</div>
+                  <Link href='/history'>
+                    <a className='col text-end mt-4 text-decoration-none text-color3'>
+                      See all
+                    </a>
+                  </Link>
                 </div>
                 {history.map(item => {
                   return (

@@ -20,6 +20,7 @@ const CreatePin = () => {
     console.log(register.data)
     console.log("pin" + otp)
     registerProcess(register.data, otp)
+    alert('Register success!')
     router.push('/pinSuccess')
   }
 
